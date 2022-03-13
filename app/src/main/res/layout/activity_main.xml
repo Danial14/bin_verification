@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verification: Placement to Bin"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:id="@+id/dateLabel"
+            android:gravity="center_vertical"
+            android:text="Date"
+            android:layout_marginTop="15dp"
+            />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/dateLabel"
+            android:background="@drawable/rouded_edit_text_one"
+            android:hint="Date"
+            android:layout_marginTop="15dp"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:id="@+id/warehouseLabel"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/dateLabel"
+            android:layout_marginTop="15dp"
+            android:text="Warehouse"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/warehouseLabel"
+            android:layout_below="@+id/date"
+            android:background="@drawable/rouded_edit_text_one"
+            android:hint="Warehouse"
+            android:id="@+id/warehouse"
+            />
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:id="@+id/batchNoLabel"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/warehouseLabel"
+            android:layout_marginTop="15dp"
+            android:text="Batch no:"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/rouded_edit_text_one"
+            android:layout_toEndOf="@+id/batchNoLabel"
+            android:layout_below="@+id/warehouse"
+            android:hint="Batch no"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/table_data"
+        />
+
+</LinearLayout>
